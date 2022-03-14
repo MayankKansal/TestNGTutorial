@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test 2">
+	<test name="Rest">
+	<groups>
+		<run>
+			<include name="smoke"/>
+			
+			
+		</run>
+	</groups>
+		<classes>
+			<!-- <class name = "test.FirstClass"/>
+			<class name = "test.ThirdClass"/>	 -->
+			<class name = "test.FourthClass"/>
+		</classes>
+	</test>
+</suite> <!-- Suite -->

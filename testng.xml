@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suite">
+<listeners>
+	<!-- <listener class-name = "test.Listeners"/> -->
+</listeners>
+
+<parameter name ="URL"  value = "Suite.url.com"/>
+	<test name="Rest">
+		<classes>
+			<class name="test.FirstClass" />
+			<class name="test.SecondClass" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="loan">
+	<parameter name ="TestUrl" value ="UrlFromTestTagWhileSuiteHasItsOwnUrl.com"/>
+		<classes>
+			<class name="test.ThirdClass">
+				<methods>
+					<exclude name="Personalloan" />
+				</methods>
+			</class>
+
+
+			<class name="test.FourthClass">
+				<methods>
+					<exclude name="PersonalloanApproved" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<!-- <test name="Rest"> <packages> <package name = "test"/> </packages> 
+		</test> -->
+
+	<!-- To run package use package tag after the test tag -->
+
+</suite> <!-- Suite -->
