@@ -18,13 +18,14 @@ public class ExcelDataDriven {
 	
 	public ArrayList<String> getData(String TestcaseName) throws IOException{
 		
-		FileInputStream fis = new FileInputStream("C:\\Users\\Admin\\Downloads\\Data\\TestCase.xlsx");
+		FileInputStream fis = new FileInputStream("E:\\TestCase.xlsx");
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		ArrayList<String> al = new ArrayList<String>();
 		int sheets = workbook.getNumberOfSheets();
 		for (int i = 0; i < sheets; i++) {
 			if (workbook.getSheetName(i).equalsIgnoreCase("testCase")) {
 				XSSFSheet sheet = workbook.getSheetAt(i);
+				System.out.println(sheet);
 				Iterator<Row> rows = sheet.iterator();
 				Row firstrow = rows.next();
 				Iterator<Cell> cells = firstrow.cellIterator();

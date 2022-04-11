@@ -1,6 +1,8 @@
 package test;
 
-import org.apache.logging.log4j.*;
+import java.util.logging.LogManager;
+
+
 
 public class Demo {
 	private static Logger log =LogManager.getLogger(Demo.class.getName());
